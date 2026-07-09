@@ -1,0 +1,16 @@
+{
+  "name": "divinity-web",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/engine",
+    "packages/client",
+    "packages/server"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w packages/client",
+    "test": "npm test -w packages/engine",
+    "server": "npm start -w packages/server",
+    "build": "npm run build -w packages/client"
+  }
+}

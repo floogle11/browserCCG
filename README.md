@@ -4,7 +4,10 @@ A two-player card battler — Order, Chaos and Ruin devotions, a 6-slot position
 random-draw mana crystals and per-god Devotion Track powers. Pure-TypeScript rules engine,
 React client, and a small WebSocket relay for private online play.
 
-## Quick start
+**Play it now:** https://floogle11.github.io/browserCCG/ — hotseat and vs-AI run
+entirely in the browser.
+
+## Quick start (local dev)
 
 ```bash
 npm install
@@ -13,6 +16,12 @@ npm run dev        # client at http://localhost:5173
 
 From the menu you can play **hotseat** (pass the device) or **vs the AI** — both run
 entirely in the browser, no server needed.
+
+## Hosting
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which runs the engine
+tests, builds the client, and deploys it to GitHub Pages. One-time setup: in the
+repo's **Settings → Pages**, set *Source* to **GitHub Actions**.
 
 ## Play online with a friend
 
@@ -39,6 +48,16 @@ The relay binds to localhost — to reach a friend elsewhere, tunnel the port:
 
 or run the server on any free-tier Node host and point both clients at it. Room codes are
 random 4-letter strings; there is no lobby list, so only people you give the code to can join.
+
+> **From the GitHub Pages site** the page is https, so browsers only allow secure
+> WebSockets — use the `wss://` tunnel URL (cloudflared/ngrok both provide one),
+> not a plain `ws://` address.
+
+## Card art
+
+Card art lives in `packages/client/public/art/<cardId>.png`; missing art falls back
+to a faction-tinted placeholder. `tools/generate-art.mjs` generates the full set from
+a locally hosted Stable Diffusion WebUI — see [docs/ART_WORKFLOW.md](docs/ART_WORKFLOW.md).
 
 ## Workspace layout
 

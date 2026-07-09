@@ -1,0 +1,59 @@
+[
+  {
+    "id": "domari",
+    "name": "Domari, Grand Judge",
+    "devotions": ["O"],
+    "abilities": [
+      { "cost": 10, "name": "Foresight", "text": "Look at the top 2 cards of your deck; you may reorder them." },
+      { "cost": 25, "name": "Judgement of Purity", "text": "Purify a friendly creature.",
+        "targets": [{ "kind": "creature", "side": "ally", "label": "Creature to purify" }] },
+      { "cost": 50, "name": "Perfect Timing", "text": "Search your deck for any card, reveal it, and put it on top of your deck." }
+    ]
+  },
+  {
+    "id": "sitja",
+    "name": "Sitja, Unbalanced Hand",
+    "devotions": ["C"],
+    "abilities": [
+      { "cost": 10, "name": "Nudge", "text": "Move a target creature to an adjacent empty slot.",
+        "targets": [{ "kind": "creature", "side": "any", "label": "Creature to move" }] },
+      { "cost": 25, "name": "Rebalance", "text": "Swap the Attack and Health of your leftmost and rightmost creatures." },
+      { "cost": 50, "name": "Sudden Betrayal", "text": "Target creature deals its Attack to the creatures adjacent to it.",
+        "targets": [{ "kind": "creature", "side": "any", "label": "Betrayer" }] }
+    ]
+  },
+  {
+    "id": "vrya",
+    "name": "Vrya, Corruption Unbound",
+    "devotions": ["R"],
+    "abilities": [
+      { "cost": 10, "name": "Wither", "text": "Deal 1 damage to a target creature.",
+        "targets": [{ "kind": "creature", "side": "any", "label": "Creature" }] },
+      { "cost": 25, "name": "Grave Call", "text": "Return the top creature of your graveyard to your hand." },
+      { "cost": 50, "name": "Last Stitch", "text": "Destroy a target creature and all copies of it everywhere (hand, deck, board).",
+        "targets": [{ "kind": "creature", "side": "any", "label": "Creature to unmake" }] }
+    ]
+  },
+  {
+    "id": "aldranari",
+    "name": "Aldranari, Rekindled Flame",
+    "devotions": ["C", "R"],
+    "abilities": [
+      { "cost": 10, "name": "Kindle", "text": "Summon a 1/1 Flame Bud token in an empty slot.",
+        "targets": [{ "kind": "slot", "side": "ally", "label": "Slot for the bud" }] },
+      { "cost": 25, "name": "Heat Wave", "text": "Apply Burn 1 to all enemy creatures." },
+      { "cost": 50, "name": "Conflagration", "text": "Double all current Burn values, then trigger all Burn damage immediately." }
+    ]
+  },
+  {
+    "id": "vaerul",
+    "name": "Vaerul, Keeper of Storms",
+    "devotions": ["O", "R"],
+    "abilities": [
+      { "cost": 10, "name": "Weather Eye", "text": "Look at the top card of your deck; you may put it on the bottom." },
+      { "cost": 25, "name": "Nullifying Gust", "text": "Nullify a target creature.",
+        "targets": [{ "kind": "creature", "side": "any", "label": "Creature to nullify" }] },
+      { "cost": 50, "name": "Flash Flood", "text": "Nullify and Snare ALL creatures." }
+    ]
+  }
+]
